@@ -83,6 +83,33 @@
     });
 
 
+    $('.read-more-btn-cta-one').on('click', function () {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'read_more_slider_cta',
+            'sliderTitle': 'The Best Online Platform For Tracking'
+        });
+    });
+
+    $('.read-more-btn-cta-two').on('click', function () {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'read_more_slider_cta',
+            'sliderTitle': 'Get Educated Online From Your Home'
+        });
+    });
+
+
+    $('#contact-form').on('submit', function(event) {
+        event.preventDefault(); 
+        
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'contact_form_submitted',
+        });
+        console.log("Hey :) Thank you for your collaboration. Hope you gave consent for Analytics!");
+        
+    });
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
