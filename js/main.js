@@ -87,7 +87,7 @@
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': 'read_more_slider_cta',
-            'sliderTitle': 'The Best Online Platform For Tracking'
+            'slider_title': 'The Best Online Platform For Tracking'
         });
     });
 
@@ -95,11 +95,11 @@
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': 'read_more_slider_cta',
-            'sliderTitle': 'Get Educated Online From Your Home'
+            'slider_title': 'Get Educated Online From Your Home'
         });
     });
 
-
+    // Form
     $('#contact-form').on('submit', function(event) {
         event.preventDefault(); 
         
@@ -107,9 +107,10 @@
         window.dataLayer.push({
             'event': 'contact_form_submitted',
         });
-        console.log("Hey :) Thank you for your collaboration. Hope you gave consent for Analytics!");
-        
+
+        console.log("Hey :) Thank you for your collaboration. Hope you gave consent for Analytics!")
     });
+
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
