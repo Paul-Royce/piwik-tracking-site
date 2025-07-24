@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 2rem;
+    line-height: 2;
+    opacity: 0;
+    background-color: beige;
+    animation: FadeIn 1s ease-in forwards;
+    animation-duration: 2s;
+}
+
+@keyframes FadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#container {
+    margin: auto;
+    max-width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2;
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    all: unset;
+    cursor: pointer;
+    opacity: 0;
+    animation: go-back ease-in forwards;
+    animation-duration: 1s;
+    animation-delay: 2.1s;
+    padding: 10px;
+}
+
+@keyframes go-back {
+    to {
+        opacity: 1;
+    }
+}
+button > a {
+    text-decoration: none;    
+    color: inherit;
+}
