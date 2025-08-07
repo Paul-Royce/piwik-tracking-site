@@ -2,9 +2,32 @@
 <html lang="en">
 
 <head>
-    <script id="CookieConsent" type="text/javascript" data-culture="EN" src="https://policy.app.cookieinformation.com/uc.js" data-gcm-version="2.0"></script>
+    <script type="text/javascript">
+
+        (function () {
+
+        const currentUrl = window.location.href;
+
+        let languageCode = currentUrl.includes("/da") ? "DA" : "EN";
+
+        const script = document.createElement("script");
+
+        script.id = "CookieConsent";
+
+        script.src = "https://policy.app.cookieinformation.com/uc.js";
+
+        script.type = "text/javascript";
+
+        script.setAttribute("data-culture", languageCode);
+
+        script.setAttribute("data-gcm-version", "2.0");
+        
+        document.head.insertBefore(script, document.head.firstChild);
+        })();
+
+    </script>
     <meta charset="utf-8">
-    <title>Home - Piwik Tracking Site</title>
+    <title>DA Home - Piwik Tracking Site</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -59,7 +82,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Piwik Tracking Site</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i> DA Homepage</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -68,8 +91,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="da.html" class="nav-item nav-link">Da Homepage</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-down m-0">
